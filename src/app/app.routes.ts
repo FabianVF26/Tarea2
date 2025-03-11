@@ -61,6 +61,20 @@ export const routes: Routes = [
       },
       
       {
+        path: 'dashboard',
+        component: DashboardComponent,
+        data: { 
+          authorities: [
+            IRoleType.admin, 
+            IRoleType.superAdmin,
+            IRoleType.user
+          ],
+          name: 'dashboard',
+          showInSidebar: false
+        }
+      },
+
+      {
         path: 'profile',
         component: ProfileComponent,
         data: { 
